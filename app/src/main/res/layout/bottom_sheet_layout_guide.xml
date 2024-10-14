@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_permission_bottom_sheet"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        android:layout_marginTop="27dp"
+        android:src="@drawable/image_guide"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnGotIt"
+        android:layout_width="match_parent"
+        android:layout_marginTop="21dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_custom_switch"
+        android:text="Got it"
+        android:textSize="18sp"
+        android:layout_marginBottom="16dp"
+        android:fontFamily="@font/roboto_medium"
+        android:textAllCaps="false"
+        android:textColor="@color/white"/>
+
+
+</LinearLayout>

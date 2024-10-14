@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/bottom_nav_status_saver_selecter"
+        android:title="Status" />
+    <item
+        android:id="@+id/menu_downloads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/bottom_nav_downloaded_status_selecter"
+        android:title="Downloaded" />
+    <item
+        android:id="@+id/menu_direct_chat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:icon="@drawable/bottom_nav_direct_chat_selecter"
+        android:title="Direct Chat" />
+</menu>

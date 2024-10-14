@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".views.activities.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:layout_alignParentTop="true"
+        android:background="@color/white">
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:background="?actionBarItemBackground"
+            android:padding="12dp"
+            android:src="@drawable/ic_menu" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@id/btnMenu"
+            android:fontFamily="@font/roboto_bold"
+            android:text="WA Status Saver"
+            android:id="@+id/toolBarTitle"
+            android:textAllCaps="false"
+            android:textSize="22sp" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp">
+
+            <FrameLayout
+                android:id="@+id/layoutIconSwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_custom_switch">
+
+                <com.arslan.statussaver.customSwtich.IconSwitch
+                    android:id="@+id/icon_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_margin="0dp"
+                    app:isw_active_tint_icon_left="@color/green_primary"
+                    app:isw_active_tint_icon_right="@color/green_primary"
+                    app:isw_background_color="@color/green_primary"
+                    app:isw_icon_left="@drawable/ic_whatsapp"
+                    app:isw_icon_right="@drawable/ic_whatsapp_business"
+                    app:isw_inactive_tint_icon_left="@color/white"
+                    app:isw_inactive_tint_icon_right="@color/white"
+                    app:isw_thumb_color_left="@color/white"
+                    app:isw_thumb_color_right="@color/white" />
+
+            </FrameLayout>
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/toolbar_title"-->
+<!--                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginLeft="16dp"-->
+<!--                android:layout_marginRight="16dp"-->
+<!--                android:textColor="@android:color/black" />-->
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navigationView"
+        android:layout_below="@id/topBar"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/splash_Screen_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="10dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <include
+            android:id="@+id/splash_layout"
+            layout="@layout/layout_splash" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/shadow_view"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_above="@id/navigationView"
+        android:layout_gravity="bottom"
+        android:background="@color/gray" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        app:itemActiveIndicatorStyle="@style/Theme.BottomNavigationView.ActiveIndicator"
+        app:itemIconTint="@drawable/bottom_navigation_color_selector"
+        app:itemTextColor="@drawable/bottom_navigation_color_selector"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_menu" />
+
+</RelativeLayout>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".views.fragments.FragmentWhatsAppStatus">
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        app:tabIndicatorAnimationMode="fade"
+        app:tabIndicatorColor="@color/green_primary"
+        app:tabIndicatorFullWidth="false"
+        app:tabSelectedTextColor="@color/green_primary"
+        app:tabTextAppearance="@style/TabText"
+        app:tabTextColor="@color/dark_blackish_green" />
+
+    <View
+        android:id="@+id/shadow_view1"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:layout_below="@id/tabLayout"
+        android:background="@color/gray" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/status_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/shadow_view1" />
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/permission_layout_holder"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:visibility="gone"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_centerInParent="true">-->
+
+<!--        <include-->
+<!--            android:id="@+id/permission_layout"-->
+<!--            layout="@layout/layout_permissions" />-->
+<!--    </LinearLayout>-->
+
+</RelativeLayout>
+
