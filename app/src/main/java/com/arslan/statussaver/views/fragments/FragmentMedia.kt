@@ -74,14 +74,7 @@ class FragmentMedia : Fragment() {
         viewModel.downloadedImagesLiveData.observe(viewLifecycleOwner) { imagesList ->
             val existingImages = imagesList.filter { mediaModel -> requireContext().isStatusExist(mediaModel.fileName) }
 
-            if (existingImages.isEmpty()) {
-                binding.layoutGuideHolder.visibility = VISIBLE
-            }
 
-            binding.layoutGuide.btnHowToUse.setOnClickListener {
-                val bottomSheetGuide = BottomSheetGuide()
-                fragmentManager?.let { it1 -> bottomSheetGuide.show(it1, "") }
-            }
             updateAdapter(existingImages, true)
         }
     }
@@ -89,15 +82,6 @@ class FragmentMedia : Fragment() {
     private fun observeDownloadedVideos() {
         viewModel.downloadedVideosLiveData.observe(viewLifecycleOwner) { videosList ->
             val existingVideos = videosList.filter { mediaModel -> requireContext().isStatusExist(mediaModel.fileName) }
-
-            if (existingVideos.isEmpty()) {
-                binding.layoutGuideHolder.visibility = VISIBLE
-            }
-
-            binding.layoutGuide.btnHowToUse.setOnClickListener {
-                val bottomSheetGuide = BottomSheetGuide()
-                fragmentManager?.let { it1 -> bottomSheetGuide.show(it1, "") }
-            }
             updateAdapter(existingVideos, true)
         }
     }

@@ -7,6 +7,7 @@ import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import com.arslan.statussaver.databinding.ActivityPermissionBinding
 import com.arslan.statussaver.views.bottomSheet.BottomSheetPermission
@@ -20,6 +21,8 @@ class PermissionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPermissionBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         binding.btnAllowPermission.setOnClickListener {
             requestReadWritePermission()

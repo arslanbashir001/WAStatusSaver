@@ -72,7 +72,7 @@ class MediaAdapter(
         } else {
             holder.statusDownload.visibility = VISIBLE
 
-            Log.d("isDowloaded", "onBindViewHolder: " + holder.itemView.context.isStatusExist(mediaModel.fileName) )
+            Log.d("isDownloaded", "onBindViewHolder: " + holder.itemView.context.isStatusExist(mediaModel.fileName) )
 
             val downloadImage = if (holder.itemView.context.isStatusExist(mediaModel.fileName)) {
                 R.drawable.ic_downloaded
@@ -124,11 +124,5 @@ class MediaAdapter(
         val statusPlay: ImageView = itemView.findViewById(R.id.status_play)
         val statusDownload: ImageView = itemView.findViewById(R.id.status_download)
         val cardStatus: CardView = itemView.findViewById(R.id.card_status)
-    }
-
-    private fun setFadeAnimation(view: View) {
-        val anim = AlphaAnimation(0.0f, 1.0f)
-        anim.duration = 20
-        view.startAnimation(anim)
     }
 }

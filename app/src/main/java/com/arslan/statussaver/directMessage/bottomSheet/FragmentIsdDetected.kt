@@ -6,18 +6,19 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.arslan.statussaver.R
+import com.arslan.statussaver.databinding.BottomSheetIsdDetectedAlertBinding
 import com.arslan.statussaver.databinding.CountryListItemBinding
-import com.arslan.statussaver.databinding.IsdDetectedAlertBinding
+import com.arslan.statussaver.databinding.ItemIsdCodeDetectedBinding
 import com.arslan.statussaver.directMessage.utils.detectCountry
 import com.arslan.statussaver.directMessage.utils.getDrawableFromAssets
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class FragmentIsdDetected : BottomSheetDialogFragment() {
 
-    private var _binding: IsdDetectedAlertBinding? = null
+    private var _binding: BottomSheetIsdDetectedAlertBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var countryBinding: CountryListItemBinding
+//    private lateinit var countryBinding: ItemIsdCodeDetectedBinding
 
     private lateinit var dialogListener: () -> Unit
     private lateinit var phoneNumber: String
@@ -30,8 +31,8 @@ class FragmentIsdDetected : BottomSheetDialogFragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
 
-        _binding = IsdDetectedAlertBinding.inflate(inflater, container, false)
-        countryBinding = binding.detectedCountry
+        _binding = BottomSheetIsdDetectedAlertBinding.inflate(inflater, container, false)
+//        countryBinding = binding.detectedCountry
         return binding.root
     }
 
@@ -49,17 +50,17 @@ class FragmentIsdDetected : BottomSheetDialogFragment() {
         if (detectedCountry == null) {
             binding.message.setText(R.string.isd_detected_message_no_country)
 //            binding.countryHeader.visibility = View.GONE
-            countryBinding.root.visibility = View.GONE
+            binding.detectedCountry.visibility = View.GONE
             binding.okContinue.setText(R.string.ignore)
         }
 
         //Otherwise, we have been successful in detecting a country.
         else {
-            countryBinding.flag.setImageDrawable(context?.getDrawableFromAssets(detectedCountry.flagResource))
-            countryBinding.countryName.text = detectedCountry.name
+            binding.detectedFlag.setImageDrawable(context?.getDrawableFromAssets(detectedCountry.flagResource))
+            binding.detectedCountryName.text = detectedCountry.name
 
             val code = "+${detectedCountry.isdCode}"
-            countryBinding.countryCode.text = code
+           binding.detectedCountryCode.text = code
 
             //Show the number without the ISD code separately to clarify things up.
             strippedNumber = phoneNumber

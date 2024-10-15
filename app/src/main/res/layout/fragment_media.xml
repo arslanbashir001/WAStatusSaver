@@ -37,16 +37,5 @@
         android:textStyle="bold"
         android:visibility="gone" />
 
-    <LinearLayout
-        android:id="@+id/layoutGuideHolder"
-        android:layout_width="wrap_content"
-        android:visibility="gone"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
 
-        <include
-            android:id="@+id/layoutGuide"
-            layout="@layout/layout_guide" />
-
-    </LinearLayout>
 </RelativeLayout>

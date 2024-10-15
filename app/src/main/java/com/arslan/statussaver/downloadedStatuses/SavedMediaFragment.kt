@@ -4,11 +4,14 @@ import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.arslan.statussaver.databinding.FragmentSavedMediaBinding
 import com.arslan.statussaver.models.MediaModel
 import com.arslan.statussaver.views.adapters.MediaAdapter
+import com.arslan.statussaver.views.bottomSheet.BottomSheetGuide
 
 
 class SavedMediaFragment : Fragment() {
@@ -44,6 +47,7 @@ class SavedMediaFragment : Fragment() {
             Log.d("SavedMediaFragment", "onViewCreated: Media list size = ${mediaList.size}")
         }
             setupRecyclerView()
+        binding.mediaRecyclerView.scheduleLayoutAnimation()
 
 
     }
@@ -56,11 +60,20 @@ class SavedMediaFragment : Fragment() {
 
         // Show or hide the TextView based on the mediaList size
         if (mediaList.isEmpty()) {
-            binding.emptyTextView.visibility = View.VISIBLE
-            binding.mediaRecyclerView.visibility = View.GONE
+            binding.emptyTextView.visibility = VISIBLE
+            binding.mediaRecyclerView.visibility = GONE
+
+            binding.layoutGuide.btnHowToUse.setOnClickListener {
+                val bottomSheetGuide = BottomSheetGuide()
+                fragmentManager?.let { it1 -> bottomSheetGuide.show(it1, "") }
+            }
+
         } else {
-            binding.emptyTextView.visibility = View.GONE
-            binding.mediaRecyclerView.visibility = View.VISIBLE
+            binding.emptyTextView.visibility = GONE
+            binding.mediaRecyclerView.visibility = VISIBLE
         }
+
+
+
     }
 }

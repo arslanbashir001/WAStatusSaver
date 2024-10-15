@@ -8,7 +8,6 @@
     android:background="@color/white"
     tools:context=".views.fragments.FragmentWhatsAppStatus">
 
-
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
         android:layout_width="match_parent"
@@ -34,18 +33,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/shadow_view1" />
-
-<!--    <LinearLayout-->
-<!--        android:id="@+id/permission_layout_holder"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:visibility="gone"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_centerInParent="true">-->
-
-<!--        <include-->
-<!--            android:id="@+id/permission_layout"-->
-<!--            layout="@layout/layout_permissions" />-->
-<!--    </LinearLayout>-->
 
 </RelativeLayout>
 

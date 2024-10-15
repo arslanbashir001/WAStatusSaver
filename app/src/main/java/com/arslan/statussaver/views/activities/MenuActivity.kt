@@ -5,6 +5,7 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.res.ResourcesCompat
 import com.arslan.statussaver.R
 import com.arslan.statussaver.databinding.ActivityMenuBinding
@@ -18,6 +19,8 @@ class MenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMenuBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         window.statusBarColor = ResourcesCompat.getColor(resources, R.color.background_color, null)
         window.navigationBarColor = ResourcesCompat.getColor(resources, R.color.background_color, null)

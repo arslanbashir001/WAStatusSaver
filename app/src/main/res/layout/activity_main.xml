@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="6dp"
+            android:textColor="@color/dark_blackish_green"
             android:layout_toEndOf="@id/btnMenu"
             android:fontFamily="@font/roboto_bold"
             android:text="WA Status Saver"
@@ -41,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
-            android:layout_marginEnd="16dp">
+            android:layout_marginEnd="18dp">
 
             <FrameLayout
                 android:id="@+id/layoutIconSwitch"
@@ -66,31 +67,15 @@
                     app:isw_thumb_color_right="@color/white" />
 
             </FrameLayout>
-
-
-<!--            <TextView-->
-<!--                android:id="@+id/toolbar_title"-->
-<!--                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_gravity="center_vertical"-->
-<!--                android:layout_marginLeft="16dp"-->
-<!--                android:layout_marginRight="16dp"-->
-<!--                android:textColor="@android:color/black" />-->
-
         </FrameLayout>
-
-
     </RelativeLayout>
-
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/navigationView"
-        android:layout_below="@id/topBar"
-        />
+        android:layout_below="@id/topBar" />
 
 
     <LinearLayout
@@ -115,10 +100,10 @@
     <View
         android:id="@+id/shadow_view"
         android:layout_width="match_parent"
-        android:layout_height="0.3dp"
+        android:layout_height="0.1dp"
         android:layout_above="@id/navigationView"
         android:layout_gravity="bottom"
-        android:background="@color/gray" />
+        android:background="#268891A1" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navigationView"

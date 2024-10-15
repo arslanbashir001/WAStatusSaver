@@ -10,10 +10,17 @@
         android:layout_centerInParent="true"
         android:orientation="vertical">
 
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/ic_launcher_round" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="26dp"
             android:fontFamily="@font/roboto_medium"
             android:text="WA status saver"
             android:textColor="@color/dark_blackish_green"
@@ -23,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="10dp"
             android:fontFamily="@font/roboto_regular"
             android:text="Best and easy status downloader\nfor Whatsapp"
             android:textAlignment="center"
@@ -33,17 +40,36 @@
     </LinearLayout>
 
 
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="250dp"
-        android:layout_height="8dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginStart="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="50dp"
-        android:progress="0"
-        android:progressDrawable="@drawable/progress_splash_shape" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="250dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_height="8dp"
+            android:progress="0"
+            android:progressDrawable="@drawable/progress_splash_shape" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Loading..."
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+
 
 </RelativeLayout>

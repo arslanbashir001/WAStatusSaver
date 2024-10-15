@@ -48,7 +48,6 @@ class FragmentWhatsAppStatus : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Initialize viewPagerTitles when the context is available
         viewPagerTitles = arrayListOf(getString(R.string.images), getString(R.string.videos))
 
         val repo = StatusRepo(requireActivity())
@@ -68,7 +67,6 @@ class FragmentWhatsAppStatus : Fragment() {
                 getString(R.string.whatsapp_not_installed)
             binding.layoutAppNotInstalled.btnInstallApp.text =
                 getString(R.string.Install_whatsApp)
-
         }
 
 
@@ -87,9 +85,10 @@ class FragmentWhatsAppStatus : Fragment() {
                         ) {
                             Log.d(
                                 "permissionCheck",
-                                "onViewCreated: " + "whatsapp business have permission"
+                                "onViewCreated: " + "whatsapp business not have permission"
                             )
-                            registerFolderPermissionCallback()
+                            getWhatsAppStatuses()
+//                            registerFolderPermissionCallback()
                         } else {
                             Log.d(
                                 "permissionCheck",
@@ -115,45 +114,6 @@ class FragmentWhatsAppStatus : Fragment() {
 
 
     private fun setupWhatsappStatuses() {
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.Q) {
-            getWhatsAppStatuses()
-        } else {
-            if (activity != null) {
-                if (activity?.contentResolver?.persistedUriPermissions?.size!! <= 0) {
-                    Log.d(
-                        "permissionCheck",
-                        "setupWhatsappStatuses: " + "Whatsapp permission not granted"
-                    )
-                    showPermissionLayout()
-
-                } else {
-                    if (activity?.contentResolver?.persistedUriPermissions?.size!! == 1) {
-                        if (!activity?.contentResolver?.persistedUriPermissions?.get(0)?.uri?.path?.contains(
-                                "Business"
-                            )!!
-                        ) {
-                            Log.d(
-                                "permissionCheck",
-                                "setupWhatsappStatuses: " + "whatsapp business have permission"
-                            )
-                            showPermissionLayout()
-                        } else {
-                            Log.d(
-                                "permissionCheck",
-                                "setupWhatsappStatuses: " + "whatsapp business not have permission"
-                            )
-                        }
-                    } else {
-                        showPermissionLayout()
-                        Log.d(
-                            "permissionCheck",
-                            "setupWhatsappStatuses: " + "whatsapp business not have permission 2"
-                        )
-                    }
-                }
-            }
-        }
-
         binding.permissionLayout.btnPermission.setOnClickListener {
             requestFolderPermission()
         }
@@ -179,12 +139,10 @@ class FragmentWhatsAppStatus : Fragment() {
         }
     }
 
-    private fun showPermissionLayout(){
+    private fun registerFolderPermissionCallback() {
+
         binding.permissionLayoutHolder.visibility = VISIBLE
         binding.permissionLayout.imgAllowPermission.setImageResource(R.drawable.image_allow_folder_permit_wp)
-    }
-
-    private fun registerFolderPermissionCallback() {
 
         folderPermissionLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
@@ -209,11 +167,9 @@ class FragmentWhatsAppStatus : Fragment() {
                     }
                 }
             }
-    }
-
+        }
 
     private fun getWhatsAppStatuses() {
-        // function to get wp statuses
         binding.permissionLayoutHolder.visibility = GONE
         viewModel.getWhatsAppStatuses()
     }

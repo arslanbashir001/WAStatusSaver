@@ -53,12 +53,6 @@ class SavedStatusesFragment : Fragment() {
             override fun createFragment(position: Int): Fragment {
                 val mediaType = if (position == 0) MEDIA_TYPE_IMAGE else MEDIA_TYPE_VIDEO
                 val filteredList = downloadedStatusesList.filter { it.type == mediaType }
-
-//                if (filteredList.isEmpty()) {
-//                    val mediaTypeStr = if (mediaType == MEDIA_TYPE_IMAGE) "Images" else "Videos"
-//                    Log.d("SavedStatusesFragment", "$mediaTypeStr not found")
-//                }
-
                 return SavedMediaFragment.newInstance(ArrayList(filteredList))
             }
         }
