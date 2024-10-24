@@ -57,6 +57,5 @@ Please install it first</string>
 
     <string name="wa_message">Optional message to include which spans more than a single line.</string>
     <string name="wa_number">1234567890</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

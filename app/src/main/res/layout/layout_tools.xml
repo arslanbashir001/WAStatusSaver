@@ -21,8 +21,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:src="@drawable/ic_whatsapp"
             app:tint="@color/white" />
 
@@ -31,7 +31,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:gravity="center"
-
             android:text="Repost"
             android:textColor="@color/white"
             android:textSize="14sp" />
@@ -50,8 +49,8 @@
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:gravity="center"
             android:src="@drawable/ic_share"
             app:tint="@color/white" />
@@ -64,6 +63,7 @@
             android:text="Share"
             android:textColor="@color/white"
             android:textSize="14sp" />
+
     </LinearLayout>
 
     <!-- download -->
@@ -81,8 +81,8 @@
 
         <ImageView
             android:id="@+id/statusDownload"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_download"
             app:tint="@color/white" />
@@ -112,8 +112,8 @@
 
         <ImageView
             android:id="@+id/statusDelete"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_delete"
             app:tint="@color/white" />

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "869084629622",
+    "project_id": "wastatussaver-23453",
+    "storage_bucket": "wastatussaver-23453.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869084629622:android:e595344dd041d36ad86d57",
+        "android_client_info": {
+          "package_name": "statussaver.downloadstatus.imagevideodonwload.wadirectchat"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASjfw1p7iDbSwCDxcCnVJQCnKH_QS3WBw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

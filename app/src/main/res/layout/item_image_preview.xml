@@ -13,19 +13,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--    <LinearLayout-->
-    <!--        android:id="@+id/tools_holder"-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.5"-->
-    <!--        app:layout_constraintStart_toStartOf="parent">-->
-
-    <!--        <include-->
-    <!--            android:id="@+id/tools"-->
-    <!--            layout="@layout/layout_tools" />-->
-
-    <!--    </LinearLayout>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

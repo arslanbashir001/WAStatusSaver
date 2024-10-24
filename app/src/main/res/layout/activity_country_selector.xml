@@ -18,6 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginStart="10dp"
+            android:contentDescription="Back Button"
             android:background="?actionBarItemBackground"
             android:padding="12dp"
             android:src="@drawable/ic_back" />
@@ -52,6 +53,7 @@
             android:drawablePadding="14dp"
             android:hint="Search country"
             android:paddingStart="16dp"
+            android:textColorHint="@color/gray"
             android:paddingTop="16dp"
             android:paddingBottom="16dp"
             android:textSize="18sp" />
@@ -64,6 +66,7 @@
             android:visibility="gone"
             android:layout_marginEnd="4dp"
             android:layout_centerVertical="true"
+            android:contentDescription="Clear search input"
             android:background="?actionBarItemBackground"
             android:padding="12dp"
             android:src="@drawable/ic_close" />
