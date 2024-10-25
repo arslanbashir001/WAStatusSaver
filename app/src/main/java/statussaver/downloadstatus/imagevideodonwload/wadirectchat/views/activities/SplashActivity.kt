@@ -58,7 +58,7 @@ class SplashActivity : AppCompatActivity() {
             0, 0
         )
 
-        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.Q) {
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
             if (!checkPermission(this@SplashActivity, Manifest.permission.READ_EXTERNAL_STORAGE)) {
                 startActivity(Intent(this@SplashActivity, PermissionActivity::class.java),
                     options.toBundle())

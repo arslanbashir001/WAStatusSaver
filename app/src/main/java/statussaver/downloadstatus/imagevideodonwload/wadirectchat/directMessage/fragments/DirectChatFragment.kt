@@ -6,6 +6,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.telephony.PhoneNumberUtils
 import android.telephony.TelephonyManager
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,16 +48,6 @@ class DirectChatFragment : Fragment() {
         isBusinessWhatsApp = SharedPrefUtils.getPrefBoolean(Constants.SWITCH_BUTTON_KEY, false)
     }
 
-    private fun updateSelectedCountry(countryCode: String) {
-
-        val country =
-            context?.loadCountriesFromJson("country_data.json")?.getCountryByCode(countryCode)
-        country?.let {
-            binding.flag.setImageDrawable(context?.getDrawableFromAssets(it.flagResource))
-            binding.isdCode.text = it.isdCode
-        }
-        selectedCountry = country
-    }
 
     private fun setClickListeners() {
 
@@ -151,20 +142,40 @@ class DirectChatFragment : Fragment() {
     override fun onResume() {
         super.onResume()
 
-        val savedCountryCode = SharedPrefUtils.getPrefString(Constants.SELECTED_COUNTRY_PREF_KEY, "")
-        if (savedCountryCode.isNullOrEmpty()) {
-            val tm = context?.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
-            val countryCodeValue = tm.networkCountryIso
-            if (countryCodeValue.toString().isEmpty() || countryCodeValue == null){
-                updateSelectedCountry("ES")
-            }else{
-                updateSelectedCountry(countryCodeValue)
+        val savedCountryCode =
+            SharedPrefUtils.getPrefString(Constants.SELECTED_COUNTRY_PREF_KEY, "")
+
+        try {
+            if (savedCountryCode.isNullOrEmpty()) {
+                val tm = context?.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+                val countryCodeValue = tm.networkCountryIso
+                if (countryCodeValue.toString().isNullOrEmpty()) {
+                    updateSelectedCountry("ES")
+                } else {
+                    Log.d("count", "onResume: " + countryCodeValue.uppercase())
+                    updateSelectedCountry(countryCodeValue.uppercase())
+                }
             }
-        } else {
-            updateSelectedCountry(savedCountryCode)
+            else {
+                updateSelectedCountry(savedCountryCode)
+            }
+        } catch (e: Exception) {
+            e.printStackTrace()
+            updateSelectedCountry("ES")
         }
 
         handleClipboardPaste()
+    }
+
+    private fun updateSelectedCountry(countryCode: String) {
+
+        val country =
+            context?.loadCountriesFromJson("country_data.json")?.getCountryByCode(countryCode)
+        country?.let {
+            binding.flag.setImageDrawable(context?.getDrawableFromAssets(it.flagResource))
+            binding.isdCode.text = it.isdCode
+        }
+        selectedCountry = country
     }
 
     private fun handleClipboardPaste() {

@@ -45,6 +45,7 @@ class FragmentMedia : Fragment() {
         binding.mediaRecyclerView.adapter = adapter
         binding.mediaRecyclerView.setHasFixedSize(true) // Improve performance if size is fixed
 
+
         setupObservers()
     }
 

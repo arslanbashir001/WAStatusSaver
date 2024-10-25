@@ -130,11 +130,6 @@
           <theme>@style/Base.Theme.StatusSaver</theme>
         </config>
       </layout>
-      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/layout_header.xml">
-        <config>
-          <theme>@style/Theme.StatusSaver</theme>
-        </config>
-      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/layout_permissions.xml">
         <config>
           <theme>@style/Base.Theme.StatusSaver</theme>
@@ -156,152 +151,20 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2c383ba-6362-4fda-8519-249ae8018a80" name="Changes" comment="second commit">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidPluginAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxCoreLibraryAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxEspressoLibraryAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibs$AndroidxLibraryAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibs$BundleAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibs$JetbrainsKotlinPluginAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibs$JetbrainsPluginAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibs$PluginAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibs$VersionAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibs.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidPluginAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxCoreLibraryAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxEspressoLibraryAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$AndroidxLibraryAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$BundleAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$JetbrainsKotlinPluginAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$JetbrainsPluginAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$PluginAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock$VersionAccessors.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/classes/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/metadata.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/sources/org/gradle/accessors/dm/LibrariesForLibs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.7/dependencies-accessors/e60667fcace20e3154849ee4641f581c5d71cc64/sources/org/gradle/accessors/dm/LibrariesForLibsInPluginsBlock.java" beforeDir="false" />
+    <list default="true" id="a2c383ba-6362-4fda-8519-249ae8018a80" name="Changes" comment="fixed bugs and improve status getting">
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/config.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/migrations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/arslan/statussaver/ExampleInstrumentedTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/statussaver/downloadstatus/imagevideodonwload/ExampleInstrumentedTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/ic_launcher-playstore.png" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/ic_launcher-playstore.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/customSwtich/Evaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/customSwtich/Evaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/customSwtich/IconSwitch.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/customSwtich/IconSwitch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/customSwtich/IconSwitchBg.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/customSwtich/IconSwitchBg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/customSwtich/ThumbView.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/customSwtich/ThumbView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/customSwtich/ViewDragHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/customSwtich/ViewDragHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/data/StatusRepo.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/data/StatusRepo.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/directMessage/activities/CountrySelectorActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/directMessage/activities/CountrySelectorActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/directMessage/adapters/CountriesAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/directMessage/adapters/CountriesAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/directMessage/bottomSheet/FragmentIsdDetected.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/directMessage/bottomSheet/FragmentIsdDetected.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/directMessage/fragments/DirectChatFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/directMessage/fragments/DirectChatFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/directMessage/model/Country.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/directMessage/model/Country.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/directMessage/utils/CountryList.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/directMessage/utils/CountryList.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/directMessage/utils/CountryUtilities.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/directMessage/utils/CountryUtilities.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/downloadedStatuses/SavedMediaFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/downloadedStatuses/SavedMediaFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/downloadedStatuses/SavedStatusesFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/downloadedStatuses/SavedStatusesFragment.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/models/MediaModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/models/MediaModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/speaker/ImageUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/speaker/NewTextToSpeech.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/speaker/SpeakWidget.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/speaker/SpeechLifecycle.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/utils/AnimUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/utils/AnimUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/utils/AppUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/utils/AppUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/utils/Constants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/utils/Constants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/utils/FileUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/utils/FileUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/utils/SharedPrefUtils.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/utils/SharedPrefUtils.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/viewmodels/StatusViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/viewmodels/StatusViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/viewmodels/factories/StatusViewModelFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/viewmodels/factories/StatusViewModelFactory.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/activities/ImagesPreview.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/activities/ImagesPreview.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/activities/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/activities/MainActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/activities/MenuActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/activities/MenuActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/activities/PermissionActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/activities/PermissionActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/activities/SplashActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/activities/SplashActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/activities/VideosPreview.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/activities/VideosPreview.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/adapters/ImagePreviewAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/adapters/ImagePreviewAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/adapters/MediaAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/adapters/MediaAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/adapters/MediaViewPagerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/adapters/MediaViewPagerAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/adapters/VideoPreviewAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/adapters/VideoPreviewAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/adapters/ViewPagerAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/adapters/ViewPagerAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/bottomSheet/BottomSheetGuide.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/bottomSheet/BottomSheetGuide.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/bottomSheet/BottomSheetPermission.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/bottomSheet/BottomSheetPermission.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/fragments/FragmentDownloadedStatues.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/fragments/FragmentDownloadedStatues.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/fragments/FragmentMedia.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/fragments/FragmentMedia.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/fragments/FragmentWhatsAppStatus.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/fragments/FragmentWhatsAppStatus.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/arslan/statussaver/views/fragments/FragmentWhatsappBusiness.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/fragments/FragmentWhatsappBusiness.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/background_button_cancel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/background_button_cancel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_country_selector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_country_selector.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_images_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_images_preview.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_menu.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_permission.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_permission.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_videos_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_videos_preview.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet_isd_detected_alert.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet_isd_detected_alert.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet_layout_guide.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet_layout_guide.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet_layout_permission.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/bottom_sheet_layout_permission.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_direct_chat.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_direct_chat.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_media.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_media.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_saved_media.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_saved_media.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_status.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_status.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_whatsapp_business.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_whatsapp_business.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_image_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_image_preview.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_media.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_media.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/item_video_preview.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/item_video_preview.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_app_not_installed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_app_not_installed.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_guide.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_guide.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_header.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_permissions.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_permissions.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_splash.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/layout_tools.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/layout_tools.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-night/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/themes.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/xml/file_paths.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/arslan/statussaver/ExampleUnitTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/statussaver/downloadstatus/imagevideodonwload/ExampleUnitTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/directMessage/fragments/DirectChatFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/directMessage/fragments/DirectChatFragment.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/activities/SplashActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/activities/SplashActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/fragments/FragmentMedia.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/statussaver/downloadstatus/imagevideodonwload/wadirectchat/views/fragments/FragmentMedia.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,7 +174,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=LocalEmulator, isTemplate=false, identifier=path=C:\Users\dell\.android\avd\Small_Phone_API_28.avd)]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[DeviceId(pluginId=PhysicalDevice, isTemplate=false, identifier=serial=BE9HQGPNDATCEE4P)]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -541,11 +404,20 @@
       <option name="project" value="LOCAL" />
       <updated>1729018986535</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixed bugs and improve status getting">
+      <option name="closed" value="true" />
+      <created>1729798832623</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1729798832623</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="second commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
+    <MESSAGE value="fixed bugs and improve status getting" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bugs and improve status getting" />
   </component>
 </project>
