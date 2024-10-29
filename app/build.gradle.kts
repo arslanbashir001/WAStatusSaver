@@ -13,8 +13,8 @@ android {
         applicationId = "statussaver.downloadstatus.imagevideodonwload.wadirectchat"
         minSdk = 24
         targetSdk = 34
-        versionCode = 3
-        versionName = "1.2"
+        versionCode = 5
+        versionName = "1.4"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -31,6 +31,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
     compileOptions {
@@ -52,6 +53,7 @@ dependencies {
     implementation(libs.firebase.analytics)
     implementation(platform("com.google.firebase:firebase-bom:33.4.0"))
     implementation("com.google.firebase:firebase-crashlytics")
+    implementation(libs.firebase.database)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -64,7 +66,7 @@ dependencies {
 
     implementation ("io.github.l4digital:fastscroll:2.0.1")
 
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6" )// or the latest version
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6" ) // or the latest version
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.6")
 
     implementation ("com.google.code.gson:gson:2.11.0")

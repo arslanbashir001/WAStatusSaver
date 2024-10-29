@@ -115,7 +115,7 @@ public class IconSwitch extends ViewGroup {
 
         int colorDefInactive = getAccentColor();
         int colorDefActive = Color.WHITE;
-        int colorDefBackground = ContextCompat.getColor(getContext(), R.color.isw_defaultBg);
+        int colorDefBackground = ContextCompat.getColor(getContext(), R.color.green_primary);
         //noinspection UnnecessaryLocalVariable
         int colorDefThumb = colorDefInactive;
 

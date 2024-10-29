@@ -85,9 +85,7 @@ class DirectChatFragment : Fragment() {
                 FragmentIsdDetected.newInstance(phoneNumber)
                     .setDialogClickListener {
                         context?.let {
-                            getLaunchIntentForShareLink(phoneNumber, message).launchIfResolved(
-                                it
-                            )
+                            getLaunchIntentForShareLink(phoneNumber, message).launchIfResolved(it)
                         }
                     }
                     .show(it.supportFragmentManager, "ISD DETECTED")
@@ -147,31 +145,30 @@ class DirectChatFragment : Fragment() {
 
         try {
             if (savedCountryCode.isNullOrEmpty()) {
+
                 val tm = context?.getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
-                val countryCodeValue = tm.networkCountryIso
-                if (countryCodeValue.toString().isNullOrEmpty()) {
-                    updateSelectedCountry("ES")
+                val deviceCountryCode = tm.networkCountryIso
+
+                if (deviceCountryCode.toString().isNotEmpty() || deviceCountryCode != null) {
+                    Log.d("count", "onResume: " + deviceCountryCode.uppercase())
+                    updateSelectedCountry(deviceCountryCode.uppercase())
                 } else {
-                    Log.d("count", "onResume: " + countryCodeValue.uppercase())
-                    updateSelectedCountry(countryCodeValue.uppercase())
+                    updateSelectedCountry("ES")
                 }
-            }
-            else {
+            } else {
                 updateSelectedCountry(savedCountryCode)
             }
         } catch (e: Exception) {
             e.printStackTrace()
-            updateSelectedCountry("ES")
         }
 
         handleClipboardPaste()
     }
 
     private fun updateSelectedCountry(countryCode: String) {
-
-        val country =
-            context?.loadCountriesFromJson("country_data.json")?.getCountryByCode(countryCode)
-        country?.let {
+        val country: Country =
+            context?.loadCountriesFromJson("country_data.json")?.getCountryByCode(countryCode)!!
+        country.let {
             binding.flag.setImageDrawable(context?.getDrawableFromAssets(it.flagResource))
             binding.isdCode.text = it.isdCode
         }

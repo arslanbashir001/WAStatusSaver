@@ -12,7 +12,9 @@ import android.widget.AdapterView.OnItemClickListener
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.databinding.ActivityCountrySelectorBinding
+import statussaver.downloadstatus.imagevideodonwload.wadirectchat.directMessage.adapters.CountriesAdapter
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.directMessage.model.Country
+import statussaver.downloadstatus.imagevideodonwload.wadirectchat.directMessage.utils.JSON_FILE_NAME
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.directMessage.utils.loadCountriesFromJson
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.utils.Constants
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.utils.SharedPrefUtils
@@ -20,20 +22,21 @@ import statussaver.downloadstatus.imagevideodonwload.wadirectchat.utils.SharedPr
 class CountrySelectorActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityCountrySelectorBinding
-    private lateinit var adapter: statussaver.downloadstatus.imagevideodonwload.wadirectchat.directMessage.adapters.CountriesAdapter
+    private lateinit var adapter: CountriesAdapter
     private lateinit var countryList: ArrayList<Country>
-    private var filteredList: ArrayList<Country> = ArrayList()
+    private lateinit var filteredList: ArrayList<Country>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityCountrySelectorBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        countryList = loadCountriesFromJson("country_data.json")
+        countryList = loadCountriesFromJson(JSON_FILE_NAME)
+        filteredList = ArrayList()
         filteredList.addAll(countryList)
 
         adapter =
-            statussaver.downloadstatus.imagevideodonwload.wadirectchat.directMessage.adapters.CountriesAdapter(
+            CountriesAdapter(
                 filteredList,
                 object : OnItemClickListener {
                     override fun onItemClick(p0: AdapterView<*>?, view: View?, pos: Int, p3: Long) {

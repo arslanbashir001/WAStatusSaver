@@ -32,10 +32,8 @@ import statussaver.downloadstatus.imagevideodonwload.wadirectchat.views.adapters
 class FragmentWhatsappBusiness : Fragment() {
 
     private lateinit var binding: FragmentWhatsappBusinessBinding
-
     private var viewPagerTitles: ArrayList<String> = arrayListOf()
     private lateinit var viewModel: StatusViewModel
-
     private lateinit var folderPermissionLauncher: ActivityResultLauncher<Intent>
 
     override fun onCreateView(
@@ -60,8 +58,8 @@ class FragmentWhatsappBusiness : Fragment() {
 
 
         if (context?.isAppInstalled(Constants.TYPE_WHATSAPP_BUSINESS) == true) {
-            setupBusinessWhatsAppStatuses()
             binding.appNotInstalledLayoutHolder.visibility = GONE
+            setupBusinessWhatsAppStatuses()
         } else {
             binding.appNotInstalledLayoutHolder.visibility = VISIBLE
             binding.layoutAppNotInstalled.imgAppNotInstalled.setImageResource(R.drawable.vector_wp_business_not_installed)
@@ -69,19 +67,19 @@ class FragmentWhatsappBusiness : Fragment() {
                 getString(R.string.whatsapp_business_not_installed)
             binding.layoutAppNotInstalled.btnInstallApp.text =
                 getString(R.string.Install_whatsApp_business)
-            Log.d("isWhatsappInstalled", "onResume: " + "Business Whatsapp not installed")
         }
 
 
-        if (activity?.contentResolver?.persistedUriPermissions?.size!! != 0) {
-            if (activity?.contentResolver?.persistedUriPermissions?.get(0)?.uri?.path?.contains("Business")!!) {
-                Log.d(tag, "onViewCreated: " + "this is whatsApp business permission")
-            } else {
-                registerFolderPermissionCallback()
-            }
-        } else {
-            registerFolderPermissionCallback()
-        }
+//        if (activity?.contentResolver?.persistedUriPermissions?.size!! != 0) {
+//            if (activity?.contentResolver?.persistedUriPermissions?.get(0)?.uri?.path?.contains("Business")!!) {
+//                Log.d(tag, "onViewCreated: " + "this is whatsApp business permission")
+//                getWhatsAppBusinessStatuses()
+//            } else {
+//                registerFolderPermissionCallback()
+//            }
+//        } else {
+//            registerFolderPermissionCallback()
+//        }
 
         binding.layoutAppNotInstalled.btnInstallApp.setOnClickListener {
             context?.installWhatsApp(Constants.TYPE_WHATSAPP_BUSINESS)
@@ -99,6 +97,10 @@ class FragmentWhatsappBusiness : Fragment() {
     }
 
     private fun registerFolderPermissionCallback() {
+
+        binding.permissionLayoutHolder.visibility = VISIBLE
+        binding.permissionLayout.imgAllowPermission.setImageResource(R.drawable.image_allow_permit_wp_business)
+
         folderPermissionLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
                 if (result.resultCode == AppCompatActivity.RESULT_OK) {
@@ -124,33 +126,40 @@ class FragmentWhatsappBusiness : Fragment() {
     }
 
     private fun setupBusinessWhatsAppStatuses() {
-        if (activity?.contentResolver?.persistedUriPermissions?.size!! != 0) {
-            if (activity?.contentResolver?.persistedUriPermissions?.get(0)?.uri?.path?.contains("Business")!!) {
-                Log.d(
-                    "permissionCheck",
-                    "setupBusinessWhatsAppStatuses: " + "whatsapp business have permission"
-                )
-                getWhatsAppBusinessStatuses()
+
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
+            getWhatsAppBusinessStatuses()
+        }else{
+            if (activity?.contentResolver?.persistedUriPermissions?.size!! != 0) {
+                if (activity?.contentResolver?.persistedUriPermissions?.get(0)?.uri?.path?.contains("Business")!!) {
+                    Log.d(
+                        "permissionCheck",
+                        "setupBusinessWhatsAppStatuses: " + "whatsapp business have permission"
+                    )
+                    getWhatsAppBusinessStatuses()
+                } else {
+
+                    registerFolderPermissionCallback()
+                    Log.d(
+                        "permissionCheck",
+                        "setupBusinessWhatsAppStatuses: " + "whatsapp business not have permission"
+                    )
+                }
             } else {
-//                binding.permissionLayoutHolder.visibility = VISIBLE
-                showPermissionLayout()
+
+                registerFolderPermissionCallback()
                 Log.d(
                     "permissionCheck",
-                    "setupBusinessWhatsAppStatuses: " + "whatsapp business not have permission"
+                    "setupBusinessWhatsAppStatuses: " + "whatsapp business not have permission 2"
                 )
             }
-        } else {
-            showPermissionLayout()
-//            binding.permissionLayoutHolder.visibility = VISIBLE
-            Log.d(
-                "permissionCheck",
-                "setupBusinessWhatsAppStatuses: " + "whatsapp business not have permission 2"
-            )
+
+            binding.permissionLayout.btnPermission.setOnClickListener {
+                requestFolderPermission()
+            }
+
         }
 
-        binding.permissionLayout.btnPermission.setOnClickListener {
-            requestFolderPermission()
-        }
 
 
         if (binding.statusViewPager.adapter == null) {
@@ -166,46 +175,10 @@ class FragmentWhatsappBusiness : Fragment() {
         }
     }
 
-    private fun showPermissionLayout(){
-        binding.permissionLayoutHolder.visibility = VISIBLE
-//        binding.permissionLayout.tvAllowPermission.text = "Allow Permission"
-//        binding.permissionLayout.tvPermissionDescription.text = ""
-        binding.permissionLayout.imgAllowPermission.setImageResource(R.drawable.image_allow_permit_wp_business)
-    }
 
-    private val tag = "FragmentStatus"
     private fun getWhatsAppBusinessStatuses() {
-        // function to get wp statuses
         binding.permissionLayoutHolder.visibility = GONE
-        Log.d(tag, "getWhatsAppBusinessStatuses: Getting Wp Business Statuses")
         viewModel.getWhatsAppBusinessStatuses()
     }
 
-    override fun onResume() {
-        super.onResume()
-
-//        Log.d("resumee", "onResume: " + "whatsApp business")
-
-//        val repo = StatusRepo(requireActivity())
-//        viewModel = ViewModelProvider(
-//            requireActivity(),
-//            StatusViewModelFactory(repo)
-//        )[StatusViewModel::class.java]
-//
-//        Handler(Looper.getMainLooper()).post {
-//            if (context?.isAppInstalled(Constants.TYPE_WHATSAPP_BUSINESS) == true) {
-//                setupBusinessWhatsAppStatuses()
-//                binding.appNotInstalledLayoutHolder.visibility = GONE
-//            } else {
-//                binding.appNotInstalledLayoutHolder.visibility = VISIBLE
-//                binding.layoutAppNotInstalled.tvAppNotInstalled.text =
-//                    getString(R.string.whatsapp_business_not_installed)
-//                binding.layoutAppNotInstalled.btnInstallApp.text =
-//                    getString(R.string.Install_whatsApp_business)
-//                Log.d("isWhatsappInstalled", "onResume: " + "Business Whatsapp not installed")
-//            }
-//        }
-
-
-    }
 }

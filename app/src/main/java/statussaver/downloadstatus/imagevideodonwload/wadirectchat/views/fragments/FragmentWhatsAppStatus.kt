@@ -32,7 +32,7 @@ import statussaver.downloadstatus.imagevideodonwload.wadirectchat.viewmodels.fac
 class FragmentWhatsAppStatus : Fragment() {
 
     private lateinit var binding: FragmentStatusBinding
-    private var viewPagerTitles: ArrayList<String> = arrayListOf()// Initialize later
+    private var viewPagerTitles: ArrayList<String> = arrayListOf()
     private lateinit var viewModel: StatusViewModel
 
     private lateinit var folderPermissionLauncher: ActivityResultLauncher<Intent>
@@ -68,8 +68,6 @@ class FragmentWhatsAppStatus : Fragment() {
             binding.layoutAppNotInstalled.btnInstallApp.text =
                 getString(R.string.Install_whatsApp)
         }
-
-
 
         binding.layoutAppNotInstalled.btnInstallApp.setOnClickListener {
             context?.installWhatsApp(Constants.TYPE_WHATSAPP_MAIN)

@@ -29,7 +29,7 @@ import java.io.InputStreamReader
 //
 ////this is used repeatedly. We might as well create a field for it.
 //val deviceDefaultCountry = getDefaultCountry()
-
+const val JSON_FILE_NAME = "country_data.json"
 
 //extension function on Context to create a toast.
 fun Context.createToast(@StringRes messageResource: Int) {
@@ -38,8 +38,8 @@ fun Context.createToast(@StringRes messageResource: Int) {
 
 
 //detect a country using the ISD code in the beginning.
-fun detectCountry( context: Context, phoneNumber: String): Country? {
-    context.loadCountriesFromJson("country_data.json").forEach {
+fun detectCountry(context: Context, phoneNumber: String): Country? {
+    context.loadCountriesFromJson(JSON_FILE_NAME).forEach {
         if (phoneNumber.replace("+", "").startsWith(it.isdCode)) return it
     }
     return null
@@ -71,9 +71,15 @@ fun getLaunchIntent(phoneNumber: String, message: String, business: Boolean): In
 
 
 
+
+
 fun getLaunchIntentForShareLink(phoneNumber: String, message: String): Intent {
+
+    // Encode the message to ensure it's properly formatted for a URL
+    val encodedMessage = Uri.encode(message)
+
     val total = "https://api.whatsapp.com/send?phone=" +
-            phoneNumber.replace("+", "") + "&text=${message}"
+            phoneNumber.replace("+", "") + "&text=${encodedMessage}"
 
     val intent = Intent(Intent.ACTION_SEND).apply {
         putExtra(Intent.EXTRA_TEXT, total)
@@ -108,6 +114,6 @@ fun Context.loadCountriesFromJson(fileName: String): ArrayList<Country> {
     return countries
 }
 
-fun List<Country>.getCountryByCode(code: String): Country? {
+fun ArrayList<Country>.getCountryByCode(code: String): Country? {
     return this.find { it.isoCode.equals(code, ignoreCase = true) }
 }

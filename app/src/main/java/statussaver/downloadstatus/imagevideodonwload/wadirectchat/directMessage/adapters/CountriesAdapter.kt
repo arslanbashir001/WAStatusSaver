@@ -1,5 +1,6 @@
 package statussaver.downloadstatus.imagevideodonwload.wadirectchat.directMessage.adapters
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,12 +28,13 @@ class CountriesAdapter(
 
     override fun onBindViewHolder(holder: CountryHolder, position: Int) {
         val country = countryList[position]
-        val name = "${country.name}, ${country.isoCode}"
-        val code = "+${country.isdCode}"
+//
+
+        Log.d("countryName", "onBindViewHolder: " + country.name)
 
         holder.flag.setImageDrawable(holder.itemView.context.getDrawableFromAssets(country.flagResource))
-        holder.countryName.text = name
-        holder.isdCode.text = code
+        holder.countryName.text = country.name
+        holder.isdCode.text = country.isdCode
 
         holder.itemView.setOnClickListener {
             clickListener.onItemClick(null, holder.itemView, position, 0)

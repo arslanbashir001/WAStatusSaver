@@ -5,7 +5,7 @@
         <item name="android:windowLightStatusBar">true</item>
         <item name="android:windowEnableSplitTouch">false</item>
         <item name="android:splitMotionEvents">false</item>
-        <item name="android:windowBackground">@drawable/transparent_image</item>
+        <item name="android:windowBackground">@drawable/splash_screen_background</item>
     </style>
 
 

@@ -14,6 +14,7 @@ import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.engine.DiskCacheStrategy
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.R
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.models.MEDIA_TYPE_IMAGE
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.models.MediaModel
@@ -44,20 +45,39 @@ class MediaAdapter(
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
             Log.d("versionCheck", "onBindViewHolder: " + "before q " + currentItem.pathUri)
             val fileUri = Uri.fromFile(file)
+//            Glide.with(holder.itemView.context)
+//                .load(fileUri)
+//                .into(holder.statusImage)
             Glide.with(holder.itemView.context)
                 .load(fileUri)
+                .thumbnail(0.1f)
+                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .override(holder.statusImage.width, holder.statusImage.height)
                 .into(holder.statusImage)
         } else {
             Log.d("versionCheck", "onBindViewHolder: " + "after q" + currentItem.pathUri)
             if (currentItem.pathUri.contains("content://")) {
                 Uri.fromFile(file)
+//                Glide.with(holder.itemView.context)
+//                    .load(currentItem.pathUri)
+//                    .into(holder.statusImage)
+
                 Glide.with(holder.itemView.context)
                     .load(currentItem.pathUri)
+                    .thumbnail(0.1f)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .override(holder.statusImage.width, holder.statusImage.height)
                     .into(holder.statusImage)
             } else {
                 val fileUri = Uri.fromFile(file)
+//                Glide.with(holder.itemView.context)
+//                    .load(fileUri)
+//                    .into(holder.statusImage)
                 Glide.with(holder.itemView.context)
                     .load(fileUri)
+                    .thumbnail(0.1f)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .override(holder.statusImage.width, holder.statusImage.height)
                     .into(holder.statusImage)
             }
         }

@@ -132,12 +132,8 @@ class FragmentMedia : Fragment() {
 
     override fun onResume() {
         super.onResume()
-//        setupObservers()
         Handler(Looper.getMainLooper()).post {
-            if (adapter !=null){
-                adapter.notifyDataSetChanged()
-
-            }
+            adapter.notifyDataSetChanged()
         }
 
     }

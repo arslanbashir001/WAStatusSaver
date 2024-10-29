@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="grey">#80000000</color>
-    <color name="black">#FF000000</color>
-    <color name="colorPrimary">#128C7E</color>
-    <color name="colorPrimaryDark">#075E54</color>
-    <color name="colorPrimaryLight">#25D366</color>
-    <color name="colorPrimaryHighlight">#84FFB2</color>
-    <color name="colorBottomNav">#000000</color>
-    <color name="colorComplimentary">#34B7F1</color>
-
-    <color name="colorInactiveItemDay">#414141</color>
-    <color name="colorActiveItemDay">#000000</color>
-
-    <color name="colorInactiveItemNight">#BABABA</color>
-    <color name="colorActiveItemNight">#fff</color>
-
-
-    <color name="isw_defaultBg">#302F31</color>
-
-    <color name="colorAccent">#F34E4E</color>
-
-    <color name="informationPrimary">#673AAA</color>
-    <color name="informationPrimaryDark">#63329B</color>
-
-    <color name="mapPrimary">#F34E4E</color>
-    <color name="mapPrimaryDark">#C0394F</color>
-
-
-
+    <color name="black">#121921</color>
     <color name="green_primary">#00C25C</color>
     <color name="dark_blackish_green">#0C3035</color>
     <color name="green_light">#DCF8C6</color>
@@ -36,5 +9,4 @@
     <color name="background_color">#FBF8F6</color>
     <color name="red">#FF4447</color>
     <color name="preview_activity_background_color">#1C1A1A</color>
-
 </resources>

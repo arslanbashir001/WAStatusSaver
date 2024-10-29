@@ -48,7 +48,7 @@ class VideosPreview : AppCompatActivity() {
         binding.apply {
             val list =
                 intent.getSerializableExtra(Constants.MEDIA_LIST_KEY) as ArrayList<MediaModel>
-            val scrollTo = intent.getIntExtra(Constants.MEDIA_SCROLL_KEY, 0)
+            var scrollTo = intent.getIntExtra(Constants.MEDIA_SCROLL_KEY, 0)
             val isDownloadedStatuses = intent.getBooleanExtra(Constants.IS_DOWNLOADED_STATUSES, false)
 
             Log.d("isDown", "onCreate VideosPreview: $isDownloadedStatuses")
@@ -60,17 +60,23 @@ class VideosPreview : AppCompatActivity() {
             pageSnapHelper.attachToRecyclerView(videoRecyclerView)
             videoRecyclerView.scrollToPosition(scrollTo)
 
+
             if (list.isNotEmpty()) {
                 Log.d("isDown", "onCreate VideosPreview 1: $isDownloadedStatuses")
                 updateUI(list[scrollTo], isDownloadedStatuses) // Initial UI update
+
             }
 
             videoRecyclerView.addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
                     super.onScrolled(recyclerView, dx, dy)
 
+
+
                     val layoutManager = recyclerView.layoutManager as LinearLayoutManager
                     val currentPosition = layoutManager.findFirstVisibleItemPosition()
+
+                    scrollTo = currentPosition
 
                     // Ensure that currentPosition is valid
                     if (currentPosition != RecyclerView.NO_POSITION && currentPosition >= 0 && currentPosition < list.size) {
@@ -93,6 +99,8 @@ class VideosPreview : AppCompatActivity() {
 
             binding.tools.download.setOnClickListener {
                 val currentMedia = list[scrollTo]
+
+                Log.d("scroll", "onCreate: " + scrollTo)
 
                 if (isStatusExist(currentMedia.fileName)){
                     Toast.makeText(baseContext, "File already exists", Toast.LENGTH_SHORT).show()
@@ -118,7 +126,6 @@ class VideosPreview : AppCompatActivity() {
             tools.layoutShare.setOnClickListener {
                 shareStatus(list[scrollTo].pathUri.toUri())
             }
-
 
             tools.delete.setOnClickListener {
                 val currentItemPosition =    (binding.videoRecyclerView.layoutManager as LinearLayoutManager).findFirstVisibleItemPosition()
