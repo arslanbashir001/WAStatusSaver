@@ -30,7 +30,8 @@
             android:layout_marginStart="6dp"
             android:layout_toEndOf="@id/btnBack"
             android:fontFamily="@font/roboto_bold"
-            android:text="Select Country Code"
+            android:textColor="@color/dark_blackish_green"
+            android:text="@string/select_country_code"
             android:textAllCaps="false"
             android:textSize="22sp" />
 
@@ -51,7 +52,7 @@
             android:background="@android:color/transparent"
             android:drawableStart="@drawable/ic_search"
             android:drawablePadding="14dp"
-            android:hint="Search country"
+            android:hint="@string/search_country"
             android:paddingStart="16dp"
             android:textColorHint="@color/gray"
             android:paddingTop="16dp"
@@ -79,6 +80,7 @@
         android:layout_height="match_parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
+        app:cardBackgroundColor="@color/white"
         android:layout_marginBottom="16dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="0dp">

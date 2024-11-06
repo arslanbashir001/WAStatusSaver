@@ -26,7 +26,7 @@ fun Context.shareStatus(fileUri: Uri) {
         putExtra(Intent.EXTRA_STREAM, shareUri)
         putExtra(
             Intent.EXTRA_TEXT,
-            "Check out this status! You can download my app from: <link_to_your_app>"
+            "Check out this status! You can download Whatsapp Status Saver app from: https://play.google.com/store/apps/details?id=$packageName"
         )
     }
 
@@ -101,30 +101,3 @@ fun Context.installWhatsApp(packageName: String) {
         this.startActivity(intent)
     }
 }
-
-
-
-//// Extension function to load countries from a JSON file
-//fun Context.loadCountriesFromJson(fileName: String): ArrayList<Country> {
-//    val jsonString: String
-//    val countries: ArrayList<Country>
-//
-//    // Load the JSON file from assets
-//    this.assets.open(fileName).use { inputStream ->
-//        BufferedReader(InputStreamReader(inputStream)).use { reader ->
-//            jsonString = reader.readText()
-//        }
-//    }
-//
-//    // Parse the JSON string into an ArrayList
-//    val gson = Gson()
-//    val listType = object : TypeToken<ArrayList<Country>>() {}.type
-//    countries = gson.fromJson(jsonString, listType)
-//
-//    return countries
-//}
-//
-//fun List<Country>.getCountryByCode(code: String): Country? {
-//    return this.find { it.isoCode.equals(code, ignoreCase = true) }
-//}
-

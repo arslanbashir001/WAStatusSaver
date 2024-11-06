@@ -12,7 +12,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="45dp"
         android:fontFamily="@font/roboto_medium"
-        android:text="New Update Is Available"
+        android:text="@string/new_update_is_available"
         android:textColor="@color/dark_blackish_green"
         android:textSize="18sp" />
 
@@ -22,8 +22,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="8dp"
         android:fontFamily="@font/roboto_regular"
-        android:text="The latest version of Status Saver is available\n
-with new and improved features"
+        android:text="@string/the_latest_version_of_status_saver_is_available_n_with_new_and_improved_features"
         android:textAlignment="center"
         android:textColor="@color/gray"
         android:textSize="16sp" />

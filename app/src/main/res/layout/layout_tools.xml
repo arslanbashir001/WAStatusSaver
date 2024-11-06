@@ -7,7 +7,6 @@
     android:orientation="horizontal"
     android:weightSum="3">
 
-
     <!-- repost -->
     <LinearLayout
         android:id="@+id/layoutRepost"
@@ -24,15 +23,15 @@
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:src="@drawable/ic_whatsapp"
-            app:tint="@color/white" />
+            app:tint="@color/preview_activity_icons_and_text_color" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:gravity="center"
-            android:text="Repost"
-            android:textColor="@color/white"
+            android:text="@string/repost"
+            android:textColor="@color/preview_activity_icons_and_text_color"
             android:textSize="14sp" />
 
     </LinearLayout>
@@ -53,15 +52,15 @@
             android:layout_height="24dp"
             android:gravity="center"
             android:src="@drawable/ic_share"
-            app:tint="@color/white" />
+            app:tint="@color/preview_activity_icons_and_text_color" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:gravity="center"
-            android:text="Share"
-            android:textColor="@color/white"
+            android:text="@string/share"
+            android:textColor="@color/preview_activity_icons_and_text_color"
             android:textSize="14sp" />
 
     </LinearLayout>
@@ -85,15 +84,15 @@
             android:layout_height="24dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_download"
-            app:tint="@color/white" />
+            app:tint="@color/preview_activity_icons_and_text_color" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:gravity="center"
-            android:text="Download"
-            android:textColor="@color/white"
+            android:text="@string/download"
+            android:textColor="@color/preview_activity_icons_and_text_color"
             android:textSize="14sp" />
     </LinearLayout>
 
@@ -116,15 +115,15 @@
             android:layout_height="24dp"
             android:layout_gravity="center"
             android:src="@drawable/ic_delete"
-            app:tint="@color/white" />
+            app:tint="@color/preview_activity_icons_and_text_color" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="2dp"
             android:gravity="center"
-            android:text="Delete"
-            android:textColor="@color/white"
+            android:text="@string/delete"
+            android:textColor="@color/preview_activity_icons_and_text_color"
             android:textSize="14sp" />
     </LinearLayout>
 

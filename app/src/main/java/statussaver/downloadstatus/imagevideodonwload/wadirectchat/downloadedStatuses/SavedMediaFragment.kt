@@ -1,5 +1,6 @@
 package statussaver.downloadstatus.imagevideodonwload.wadirectchat.downloadedStatuses
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -8,6 +9,7 @@ import android.view.View.GONE
 import android.view.View.VISIBLE
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import statussaver.downloadstatus.imagevideodonwload.wadirectchat.R
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.databinding.FragmentSavedMediaBinding
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.models.MediaModel
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.views.adapters.MediaAdapter
@@ -60,6 +62,18 @@ class SavedMediaFragment : Fragment() {
         // Show or hide the TextView based on the mediaList size
         if (mediaList.isEmpty()) {
             binding.emptyTextView.visibility = VISIBLE
+            val nightModeFlags = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+            when (nightModeFlags) {
+                Configuration.UI_MODE_NIGHT_YES -> {
+                    // Dark mode is active
+                    binding.layoutGuide.img.setImageResource(R.drawable.vector_guide_dark)
+                }
+                Configuration.UI_MODE_NIGHT_NO -> {
+                    // Light mode is active
+                    binding.layoutGuide.img.setImageResource(R.drawable.vector_guide_light)
+                }
+            }
+
             binding.mediaRecyclerView.visibility = GONE
             binding.emptyTextView.alpha = 0f
             binding.emptyTextView.animate()

@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/splash_screen_background">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -15,7 +14,7 @@
             android:layout_width="96dp"
             android:layout_height="96dp"
             android:layout_gravity="center_horizontal"
-            android:src="@drawable/ic_launcher_round" />
+            android:src="@drawable/logo" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -23,7 +22,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="26dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="Status Saver"
+            android:text="@string/status_saver"
             android:textColor="@color/green_primary"
             android:textSize="28sp" />
 
@@ -33,9 +32,10 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:fontFamily="@font/roboto_regular"
-            android:text="Download Your Favorite Statuses"
+            android:id="@+id/tvDescription"
+            android:text="@string/download_your_favorite_statuses"
             android:textAlignment="center"
-            android:textColor="@color/dark_blackish_green"
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
     </LinearLayout>
@@ -65,7 +65,7 @@
             android:layout_marginTop="12dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:text="Loading..."
+            android:text="@string/loading"
             android:textColor="@color/black"
             android:fontFamily="@font/roboto_regular"
             android:textSize="16sp"/>

@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:fontFamily="@font/roboto_medium"
-            android:text="Allow Permission"
+            android:text="@string/allow_permission"
             android:textAlignment="center"
             android:textColor="@color/dark_blackish_green"
             android:textSize="18sp" />
@@ -36,9 +36,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="16dp"
             android:fontFamily="@font/roboto_regular"
-            android:text="You need to allow the storage permission to \n
-save statuses. Click on (use this folder) \n
-button in setting to give access"
+            android:text="@string/you_need_to_allow_the_storage_permission_to_n_save_statuses_click_on_use_this_folder_n_button_in_setting_to_give_access"
             android:textAlignment="center"
             android:textAllCaps="false"
             android:textColor="@color/gray"
@@ -52,7 +50,7 @@ button in setting to give access"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
             android:background="@drawable/background_custom_switch"
-            android:text="Allow Permission"
+            android:text="@string/allow_permission"
             android:textAllCaps="false"
             android:gravity="center"
             android:contentDescription="allow permission button"

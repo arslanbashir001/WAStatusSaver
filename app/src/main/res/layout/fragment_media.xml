@@ -46,8 +46,8 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="14dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="No Media Found"
-            android:textColor="@color/gray"
+            android:text="@string/no_media_found"
+            android:textColor="@color/no_image_video_media_vectors_color"
             android:textSize="18sp" />
 
     </LinearLayout>

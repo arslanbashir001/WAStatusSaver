@@ -22,7 +22,7 @@ class PermissionActivity : AppCompatActivity() {
         binding = ActivityPermissionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         binding.btnAllowPermission.setOnClickListener {
             requestReadWritePermission()

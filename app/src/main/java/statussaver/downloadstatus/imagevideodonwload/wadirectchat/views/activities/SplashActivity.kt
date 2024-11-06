@@ -7,14 +7,18 @@ import android.content.pm.PackageManager
 import android.os.Build
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.view.View
+import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.core.app.ActivityOptionsCompat
-import androidx.core.content.res.ResourcesCompat
+import androidx.core.content.ContextCompat
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.R
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.databinding.ActivitySplashBinding
+import statussaver.downloadstatus.imagevideodonwload.wadirectchat.utils.SharedPrefKeys
+import statussaver.downloadstatus.imagevideodonwload.wadirectchat.utils.SharedPrefUtils
+import java.util.Locale
 
 class SplashActivity : AppCompatActivity() {
 
@@ -23,14 +27,45 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        SharedPrefUtils.init(this)
+        // Initialize SharedPrefUtils and set Locale
+        SharedPrefUtils.init(this)
+        SharedPrefUtils.getPrefString(SharedPrefKeys.PREF_KEY_SELECTED_LANGUAGE_CODE, "")?.let {
+            setLocale(it)
+        }
+
         binding = ActivitySplashBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        window.statusBarColor = ResourcesCompat.getColor(resources, R.color.background_color, null)
-        window.navigationBarColor =
-            ResourcesCompat.getColor(resources, R.color.background_color, null)
-        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
+//        SharedPrefUtils.init(this)
+
+//        Toast.makeText(baseContext, "" +
+//                SharedPrefUtils.getPrefString(SharedPrefKeys.PREF_KEY_SELECTED_LANGUAGE_CODE, ""), Toast.LENGTH_SHORT).show()
+//        SharedPrefUtils.getPrefString(SharedPrefKeys.PREF_KEY_SELECTED_LANGUAGE_CODE, "")
+//            ?.let { setLocale(it) }
+
+        val isDarkMode =
+            SharedPrefUtils.getPrefBoolean(SharedPrefKeys.PREF_KEY_IS_DARK_MODE_ON, false)
+        if (isDarkMode) {
+            Log.d("isDark", "onCreate: true")
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            window.statusBarColor = ContextCompat.getColor(this, R.color.green_light)
+            window.navigationBarColor = ContextCompat.getColor(this, R.color.green_light)
+            binding.root.setBackgroundResource(R.drawable.splash_background_night)
+            binding.tvDescription.setTextColor(
+                ContextCompat.getColor(
+                    this,
+                    R.color.splash_description_text_color
+                )
+            )
+        } else {
+            Log.d("isDark", "onCreate: false")
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            window.statusBarColor = ContextCompat.getColor(this, R.color.white)
+            binding.tvDescription.setTextColor(ContextCompat.getColor(this, R.color.black))
+            window.navigationBarColor = ContextCompat.getColor(this, R.color.white)
+            binding.root.setBackgroundResource(R.drawable.splash_background_light)
+        }
 
         binding.progressBar.max = 5000
 
@@ -43,7 +78,16 @@ class SplashActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                navigateToNextActivity()
+                val isAppOpenedFirstTime =
+                    SharedPrefUtils.getPrefBoolean(SharedPrefKeys.PREF_KEY_IS_APP_OPENED_FIRST_TIME, true)
+
+                if (isAppOpenedFirstTime) {
+                    SharedPrefUtils.putPrefBoolean(SharedPrefKeys.PREF_KEY_IS_APP_OPENED_FIRST_TIME, false)
+                    startActivity(Intent(this@SplashActivity, LanguageSelectionActivity::class.java))
+                    finish()
+                } else {
+                    navigateToNextActivity()
+                }
             }
         }
 
@@ -51,20 +95,31 @@ class SplashActivity : AppCompatActivity() {
         countDownTimer.start()
     }
 
+
+    fun setLocale(languageCode: String) {
+        // Set the locale for the app
+        val locale = Locale(languageCode)
+        Locale.setDefault(locale)
+        val config = resources.configuration
+        config.setLocale(locale)
+        // Update the configuration
+        resources.updateConfiguration(config, resources.displayMetrics)
+    }
+
+
     private fun navigateToNextActivity() {
-
-        val options = ActivityOptionsCompat.makeCustomAnimation(
-            this,
-            0, 0
-        )
-
+        val options = ActivityOptionsCompat.makeCustomAnimation(this, 0, 0)
         if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
             if (!checkPermission(this@SplashActivity, Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                startActivity(Intent(this@SplashActivity, PermissionActivity::class.java),
-                    options.toBundle())
+                startActivity(
+                    Intent(this@SplashActivity, PermissionActivity::class.java),
+                    options.toBundle()
+                )
             } else {
-                startActivity(Intent(this@SplashActivity, MainActivity::class.java),
-                    options.toBundle())
+                startActivity(
+                    Intent(this@SplashActivity, MainActivity::class.java),
+                    options.toBundle()
+                )
             }
         } else {
             startActivity(
@@ -87,64 +142,3 @@ class SplashActivity : AppCompatActivity() {
         countDownTimer.cancel()
     }
 }
-
-
-//class SplashActivity : AppCompatActivity() {
-//
-//    private lateinit var binding : ActivitySplashBinding
-//    private val handler = Handler(Looper.getMainLooper())
-//    private var progressStatus = 0
-//    private val totalDuration = 2000 // 2 seconds
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        binding = ActivitySplashBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
-//
-//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-//        window.statusBarColor = ResourcesCompat.getColor(resources, R.color.background_color, null)
-//        window.navigationBarColor = ResourcesCompat.getColor(resources, R.color.background_color, null)
-//        window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-//
-//        // Initialize the ProgressBar
-//        binding.progressBar.max = 100
-//
-//        // Start the smooth progress update
-//        Thread {
-//            while (progressStatus < 100) {
-//                progressStatus += 1
-//                // Update the progress on the UI thread
-//                handler.post { binding.progressBar.progress = progressStatus }
-//                try {
-//                    // Sleep for a short duration to create a smooth effect
-//                    Thread.sleep((totalDuration / 100).toLong()) // Update every 130 milliseconds
-//                } catch (e: InterruptedException) {
-//                    e.printStackTrace()
-//                }
-//            }
-//
-//            // Check the Android version
-//            if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.R) {
-//                if (!checkPermission(this@SplashActivity, Manifest.permission.READ_EXTERNAL_STORAGE) ||
-//                    !checkPermission(this@SplashActivity, Manifest.permission.WRITE_EXTERNAL_STORAGE)){
-//                    // Navigate to PermissionActivity if version is <= Q
-//                    startActivity(Intent(this@SplashActivity, PermissionActivity::class.java))
-//                }
-//                else {
-//                    // Navigate to MainActivity otherwise
-//                    startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-//                }
-//            } else {
-//                startActivity(Intent(this@SplashActivity, MainActivity::class.java))
-//            }
-//            finish()
-//        }.start()
-//
-//    }
-//
-//
-//    // Check if a specific permission is granted
-//    private fun checkPermission(context: Context, permission: String): Boolean {
-//        return ActivityCompat.checkSelfPermission(context, permission) == PackageManager.PERMISSION_GRANTED
-//    }
-//}

@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <color name="black">#121921</color>
     <color name="green_primary">#00C25C</color>
+    <color name="splash_progress_background_color">#DCF8C6</color>
     <color name="dark_blackish_green">#0C3035</color>
     <color name="green_light">#DCF8C6</color>
     <color name="gray">#8891A1</color>
     <color name="white">#FFFFFF</color>
+    <color name="splash_description_text_color">#000000</color>
     <color name="background_color">#FBF8F6</color>
+    <color name="bottom_sheet_background_color">#FBF8F6</color>
     <color name="red">#FF4447</color>
     <color name="preview_activity_background_color">#1C1A1A</color>
+    <color name="preview_activity_icons_and_text_color">#FFFFFF</color>
+    <color name="no_image_video_media_vectors_color">#C1C4CB</color>
+    <color name="language_selection_item_background_color">#F1F1F1</color>
+
+    <color name="radio_selected_color">#FFFF</color>
+    <color name="radio_unselected_color">#8891A1</color>
+
 </resources>

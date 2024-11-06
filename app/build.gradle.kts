@@ -13,8 +13,8 @@ android {
         applicationId = "statussaver.downloadstatus.imagevideodonwload.wadirectchat"
         minSdk = 24
         targetSdk = 34
-        versionCode = 5
-        versionName = "1.4"
+        versionCode = 7
+        versionName = "1.6"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -66,7 +66,7 @@ dependencies {
 
     implementation ("io.github.l4digital:fastscroll:2.0.1")
 
-    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6" ) // or the latest version
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.6") // or the latest version
     implementation ("androidx.lifecycle:lifecycle-livedata-ktx:2.8.6")
 
     implementation ("com.google.code.gson:gson:2.11.0")

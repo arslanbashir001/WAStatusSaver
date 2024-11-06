@@ -304,8 +304,8 @@
                         <option name="values">
                           <map>
                             <entry key="assetSourceType" value="FILE" />
-                            <entry key="outputName" value="button_update_now" />
-                            <entry key="sourceFile" value="C:\Users\dell\Downloads\Group 54 (4).svg" />
+                            <entry key="outputName" value="ic_done_language_selection" />
+                            <entry key="sourceFile" value="C:\Users\dell\Downloads\check_circle.svg" />
                           </map>
                         </option>
                       </PersistentState>

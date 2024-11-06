@@ -1,14 +1,39 @@
 <resources>
+
     <style name="Base.Theme.StatusSaver" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="android:statusBarColor">@color/black</item>
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/white</item>
+        <item name="android:navigationBarColor">@color/white</item>
+        <item name="android:windowLightStatusBar">false</item>
         <item name="android:windowEnableSplitTouch">false</item>
         <item name="android:splitMotionEvents">false</item>
-
     </style>
 
+    <style name="SplashActivityTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/green_light</item>
+        <item name="android:navigationBarColor">@color/green_light</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+        <item name="android:windowBackground">@drawable/splash_background_night</item>
+    </style>
 
-    <!-- // for shapeable imageView-->
+    <style name="MenuActivityTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/green_light</item>
+        <item name="android:navigationBarColor">@color/green_light</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <style name="ImageVideoPreviewTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/green_light</item>
+        <item name="android:navigationBarColor">@color/green_light</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowEnableSplitTouch">false</item>
+        <item name="android:splitMotionEvents">false</item>
+    </style>
+
+    <!-- // for shapeAble imageView-->
     <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
         <item name="cornerSize">50%</item>
     </style>
@@ -21,4 +46,5 @@
     <style name="Theme.BottomNavigationView.ActiveIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
         <item name="android:color">@color/green_light</item>
     </style>
+
 </resources>

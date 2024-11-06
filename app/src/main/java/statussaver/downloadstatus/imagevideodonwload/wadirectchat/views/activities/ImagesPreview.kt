@@ -39,10 +39,10 @@ class ImagesPreview : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        window.statusBarColor = ResourcesCompat.getColor(resources, R.color.preview_activity_background_color, null)
-        window.navigationBarColor = ResourcesCompat.getColor(resources, R.color.preview_activity_background_color, null)
-        window.decorView.systemUiVisibility = 0
+//        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+//        window.statusBarColor = ResourcesCompat.getColor(resources, R.color.preview_activity_background_color, null)
+//        window.navigationBarColor = ResourcesCompat.getColor(resources, R.color.preview_activity_background_color, null)
+//        window.decorView.systemUiVisibility = 0
 
         val repo = StatusRepo(this@ImagesPreview)
         viewModel = ViewModelProvider(

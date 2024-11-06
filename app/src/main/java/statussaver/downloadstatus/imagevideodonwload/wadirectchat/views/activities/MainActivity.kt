@@ -11,7 +11,6 @@ import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.R
@@ -19,10 +18,11 @@ import statussaver.downloadstatus.imagevideodonwload.wadirectchat.customSwtich.I
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.customSwtich.IconSwitch.Checked
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.databinding.ActivityMainBinding
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.utils.Constants
+import statussaver.downloadstatus.imagevideodonwload.wadirectchat.utils.SharedPrefKeys
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.utils.SharedPrefUtils
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.views.adapters.ViewPagerAdapter
-import statussaver.downloadstatus.imagevideodonwload.wadirectchat.views.bottomSheet.BottomSheetPermission
 import statussaver.downloadstatus.imagevideodonwload.wadirectchat.views.bottomSheet.BottomSheetUpdate
+import java.util.Locale
 
 class MainActivity : AppCompatActivity(), IconSwitch.CheckedChangeListener {
 
@@ -30,20 +30,38 @@ class MainActivity : AppCompatActivity(), IconSwitch.CheckedChangeListener {
     private var isDirectChatFragment: Boolean = false
     private lateinit var database: DatabaseReference
 
+
+    fun setLocale(languageCode: String) {
+        // Set the locale for the app
+        val locale = Locale(languageCode)
+        Locale.setDefault(locale)
+
+        val config = resources.configuration
+        config.setLocale(locale)
+        // Update the configuration
+        resources.updateConfiguration(config, resources.displayMetrics)
+
+        // Save the language code to SharedPreferences using SharedPrefUtils
+//        SharedPrefUtils.putPrefString(SharedPrefKeys.PREF_KEY_SELECTED_LANGUAGE_CODE, languageCode)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+//        SharedPrefUtils.init(this)
+
         // Initialize Firebase Database
         database = FirebaseDatabase.getInstance().getReference("LatestVersionCode")
+//        Toast.makeText(baseContext, "" +
+//                SharedPrefUtils.getPrefString(SharedPrefKeys.PREF_KEY_SELECTED_LANGUAGE_CODE, ""), Toast.LENGTH_SHORT).show()
+//        SharedPrefUtils.getPrefString(SharedPrefKeys.PREF_KEY_SELECTED_LANGUAGE_CODE, "")
+//            ?.let { setLocale(it) }
 
         checkForUpdate()
 
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-
         binding.iconSwitch.setCheckedChangeListener(this)
-        SharedPrefUtils.init(this)
 
 
         val viewPagerAdapter = ViewPagerAdapter(this)
@@ -63,7 +81,7 @@ class MainActivity : AppCompatActivity(), IconSwitch.CheckedChangeListener {
         binding.navigationView.setOnItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_status -> {
-                    binding.toolBarTitle.text = "WA Status Saver"
+                    binding.toolBarTitle.text = getString(R.string.wa_status_saver)
                     isDirectChatFragment = false
                     if (SharedPrefUtils.getPrefBoolean(Constants.SWITCH_BUTTON_KEY, false)) {
                         updateUI(true)
@@ -74,14 +92,14 @@ class MainActivity : AppCompatActivity(), IconSwitch.CheckedChangeListener {
                 }
 
                 R.id.menu_downloads -> {
-                    binding.toolBarTitle.text = "Downloaded"
+                    binding.toolBarTitle.text = getString(R.string.downloaded)
                     binding.viewPager.setCurrentItem(2, false)
                     binding.iconSwitch.visibility = View.GONE
                     true
                 }
 
                 R.id.menu_direct_chat -> {
-                    binding.toolBarTitle.text = "Direct Chat"
+                    binding.toolBarTitle.text = getString(R.string.directChat)
                     isDirectChatFragment = true
                     binding.viewPager.setCurrentItem(3, false)
                     binding.iconSwitch.visibility = View.VISIBLE
@@ -160,6 +178,7 @@ class MainActivity : AppCompatActivity(), IconSwitch.CheckedChangeListener {
             }
         }
     }
+
     private fun checkForUpdate() {
         val currentVersionCode = getCurrentVersionCode()
 
