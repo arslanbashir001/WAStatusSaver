@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Status Saver</string>
+    <string name="whatsapp_business_not_installed">آپ کے پاس WA بزنس نہیں ہے\n
+براہ کرم پہلے اسے انسٹال کریں۔</string>
+    <string name="Install_whatsApp_business">WA بزنس انسٹال کریں۔</string>
+    <string name="whatsapp_not_installed">آپ کے پاس WA نہیں ہے \n
+براہ کرم پہلے اسے انسٹال کریں۔</string>
+    <string name="Install_whatsApp">WA انسٹال کریں۔</string>
+    <string name="images">امیجز</string>
+    <string name="videos">ویڈیوز</string>
+    <string name="not_installed">آپ کے آلے پر مطلوبہ ایپلیکیشن انسٹال نہیں ہے۔</string>
+    <string name="privacy_policy_title">رازداری کی پالیسی</string>
+    <string name="enter_number_warn">براہ کرم پہلے واٹس ایپ نمبر درج کریں۔</string>
+    <string name="enter_text">اپنا پیغام درج کریں (اختیاری)</string>
+    <string name="enter_number">نمبر درج کریں۔</string>
+    <string name="phone_number">فون نمبر</string>
+    <string name="wa_business">WA بزنس</string>
+    <string name="whatsapp">واٹس ایپ</string>
+    <string name="country_flag">ملک کا پرچم</string>
+    <string name="format">فارمیٹ</string>
+    <string name="plus" />
+    <string name="open_via">اس لنک کو کھولنے کے لیے ایک ایپ منتخب کریں۔</string>
+    <string name="device_default">ڈیوائس ڈیفالٹ</string>
+    <string name="select_country">ملک منتخب کریں۔</string>
+    <string name="all_countries">تمام ممالک</string>
+    <string name="message">پیغام</string>
+    <string name="isd_detected_message_no_country">ایسا لگتا ہے کہ آپ نے فون نمبر کے ساتھ ISD کوڈ درج کیا ہے۔ ہم نے معلوم کرنے کی کوشش کی کہ یہ کون سا ملک ہے، لیکن ناکام رہے۔ فون نمبر سے ISD کوڈ ہٹا کر دوبارہ جاری رکھنے کی کوشش کریں۔\nاگر آپ بہرحال جاری رکھنا چاہتے ہیں تو آپ نظر انداز کر سکتے ہیں۔</string>
+    <string name="isd_detected_message">ایسا لگتا ہے کہ آپ نے فون نمبر کے ساتھ ISD کوڈ درج کیا ہے۔ ہم نے مناسب ملک کا پتہ لگانے اور اسے خود بخود سیٹ کرنے کی کوشش کی ہے۔</string>
+    <string name="did_we_get_it_right">کیا ہم نے اسے ٹھیک سمجھا؟</string>
+    <string name="no_number_entered">کوئی فون نمبر درج نہیں کیا گیا۔</string>
+    <string name="isd_code_detected">ISD کوڈ کا پتہ چلا</string>
+    <string name="ok_continue">جاری رکھیں</string>
+    <string name="country">ملک</string>
+    <string name="ignore">نظر انداز کرنا</string>
+    <string name="paste">چسپاں کریں۔</string>
+    <string name="wa_message">شامل کرنے کے لیے اختیاری پیغام جو ایک لائن سے زیادہ پھیلا ہوا ہو۔</string>
+    <string name="wa_number">1234567890</string>
+    <string name="select_country_code">ملک کا کوڈ منتخب کریں۔</string>
+    <string name="search_country">ملک تلاش کریں۔</string>
+    <string name="wa_status_saver">\u202Bاسٹیٹس سیور WA\u202C</string>
+    <string name="menu">مینو</string>
+    <string name="languages">زبانیں</string>
+    <string name="english">انگریزی</string>
+    <string name="pick_the_language_for_your_app">اپنی ایپ کے لیے زبان چنیں۔</string>
+    <string name="notifications">اطلاعات</string>
+    <string name="notified_of_new_statuses">نئے سٹیٹس کے بارے میں مطلع کیا گیا۔</string>
+    <string name="dark_mode">ڈارک موڈ</string>
+    <string name="help_to_reduce_eye_strain">آنکھوں کے دباؤ کو کم کرنے میں مدد کریں۔</string>
+    <string name="privacy_policy">رازداری کی پالیسی</string>
+    <string name="terms_and_conditions">شرائط و ضوابط</string>
+    <string name="share_app">ایپ شیئر کریں۔</string>
+    <string name="share_app_with_yours_friend">اپنے دوست کے ساتھ ایپ کا اشتراک کریں۔</string>
+    <string name="rate_us">ہمیں درجہ دیں۔</string>
+    <string name="support_our_work_by_your_rating">اپنی درجہ بندی کے ذریعہ ہمارے کام کی حمایت کریں۔</string>
+    <string name="allow_permission">اجازت دیں۔</string>
+    <string name="you_need_to_allow_the_storage_permission_n_to_save_statuses">اسٹیٹس کو محفوظ کرنے کے لیے آپ کو اسٹوریج کی اجازت \n دینا ہوگی۔</string>
+    <string name="status_saver">اسٹیٹس سیور</string>
+    <string name="download_your_favorite_statuses">اپنے پسندیدہ سٹیٹس ڈاؤن لوڈ کریں۔</string>
+    <string name="loading">لوڈ ہو رہا ہے...</string>
+    <string name="cancel">منسوخ کریں۔</string>
+    <string name="got_it">سمجھ گیا</string>
+    <string name="grant_storage_permission">سٹوریج کی اجازت دیں۔</string>
+    <string name="allow_storage_permission_to_save_n_status_in_you_mobile">اپنے موبائل میں اسٹیٹس کو محفوظ کرنے کے لیے اسٹوریج کی اجازت دیں۔</string>
+    <string name="new_update_is_available">نئی تازہ کاری دستیاب ہے۔</string>
+    <string name="the_latest_version_of_status_saver_is_available_n_with_new_and_improved_features">اسٹیٹس سیور کا تازہ ترین ورژن نئی اور بہتر خصوصیات کے ساتھ\n دستیاب ہے۔</string>
+    <string name="okay">ٹھیک ہے۔</string>
+    <string name="send_message">پیغام بھیجیں۔</string>
+    <string name="share_link">لنک شیئر کریں۔</string>
+    <string name="no_media_found">کوئی میڈیا نہیں ملا</string>
+    <string name="you_don_t_have_wa_business_n_please_install_it_first">آپ کے پاس WA بزنس نہیں ہے\n براہ کرم پہلے اسے انسٹال کریں۔</string>
+    <string name="install_app">ایپ انسٹال کریں۔</string>
+    <string name="how_to_use">کیسے استعمال کریں؟</string>
+    <string name="you_need_to_allow_the_storage_permission_to_n_save_statuses_click_on_use_this_folder_n_button_in_setting_to_give_access">اسٹیٹسز کو محفوظ کرنے کے لیے آپ کو اسٹوریج کی اجازت دینا ہوگی۔ رسائی دینے کے لیے سیٹنگ میں بٹن پر کلک کریں (اس فولڈر کو استعمال کریں) \n</string>
+    <string name="repost">دوبارہ پوسٹ کریں۔</string>
+    <string name="share">شیئر کریں۔</string>
+    <string name="download">ڈاؤن لوڈ کریں۔</string>
+    <string name="delete">حذف کریں۔</string>
+    <string name="select_app_language">ایپ کی زبان منتخب کریں۔</string>
+
+
+    <string name="downloaded">ڈاؤن لوڈ کیا گیا۔</string>
+    <string name="directChat">براہ راست چیٹ</string>
+    <string name="status">اسٹیٹس</string>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Status Saver</string>
+
+    <string name="whatsapp_business_not_installed">Sie haben WA Business nicht\n
+Bitte installieren Sie es zuerst</string>
+    <string name="Install_whatsApp_business">WA Business installieren</string>
+    <string name="whatsapp_not_installed">Sie haben WA nicht \n
+Bitte installieren Sie es zuerst</string>
+    <string name="Install_whatsApp">WA installieren</string>
+    <string name="images">Bilder</string>
+    <string name="videos">Videos</string>
+    <string name="not_installed">Die gewünschte Anwendung ist auf Ihrem Gerät nicht installiert</string>
+    <string name="privacy_policy_title">Datenschutzrichtlinie</string>
+    <string name="enter_number_warn">Bitte geben Sie zuerst eine WhatsApp-Nummer ein.</string>
+    <string name="enter_text">Geben Sie Ihre Nachricht ein (optional)</string>
+    <string name="enter_number">Nummer eingeben</string>
+    <string name="phone_number">Telefonnummer</string>
+    <string name="wa_business">WA-Geschäft</string>
+    <string name="whatsapp">WhatsApp</string>
+    <string name="country_flag">Landesflagge</string>
+    <string name="format">Format</string>
+    <string name="plus" />
+    <string name="open_via">Wählen Sie eine App aus, um diesen Link zu öffnen.</string>
+    <string name="device_default">Gerätestandard</string>
+    <string name="select_country">Land auswählen</string>
+    <string name="all_countries">Alle Länder</string>
+    <string name="message">Nachricht</string>
+    <string name="isd_detected_message_no_country">Es sieht so aus, als hätten Sie den ISD-Code zusammen mit der Telefonnummer eingegeben. Wir haben versucht, das Land zu ermitteln, konnten dies jedoch nicht. Versuchen Sie, den ISD-Code aus der Telefonnummer zu entfernen und fahren Sie erneut fort.\nSie können auf „Ignorieren“ klicken, wenn Sie trotzdem fortfahren möchten.</string>
+    <string name="isd_detected_message">Es sieht so aus, als hätten Sie den ISD-Code zusammen mit der Telefonnummer eingegeben. Wir haben versucht, das entsprechende Land zu erkennen und es automatisch einzustellen</string>
+    <string name="did_we_get_it_right">Haben wir es richtig gemacht?</string>
+    <string name="no_number_entered">Keine Telefonnummer eingegeben.</string>
+    <string name="isd_code_detected">ISD-Code erkannt</string>
+    <string name="ok_continue">Weitermachen</string>
+    <string name="country">Land</string>
+    <string name="ignore">Ignorieren</string>
+    <string name="paste">Paste</string>
+    <string name="wa_message">Optionale Nachricht, die mehr als eine Zeile umfasst.</string>
+    <string name="wa_number">1234567890</string>
+    <string name="select_country_code">Ländercode auswählen</string>
+    <string name="search_country">Suche nach Land</string>
+    <string name="wa_status_saver">WA Status Saver</string>
+    <string name="menu">Speisekarte</string>
+    <string name="languages">Sprachen</string>
+    <string name="english">Englisch</string>
+    <string name="pick_the_language_for_your_app">Wählen Sie die Sprache für Ihre App</string>
+    <string name="notifications">Benachrichtigungen</string>
+    <string name="notified_of_new_statuses">Über neue Status benachrichtigt</string>
+    <string name="dark_mode">Dunkler Modus</string>
+    <string name="help_to_reduce_eye_strain">Helfen Sie, die Augenbelastung zu reduzieren</string>
+    <string name="privacy_policy">Datenschutzrichtlinie</string>
+    <string name="terms_and_conditions">Geschäftsbedingungen</string>
+    <string name="share_app">App teilen</string>
+    <string name="share_app_with_yours_friend">Teilen Sie die App mit Ihrem Freund</string>
+    <string name="rate_us">Bewerten Sie uns</string>
+    <string name="support_our_work_by_your_rating">Unterstützen Sie unsere Arbeit durch Ihre Bewertung</string>
+    <string name="allow_permission">Berechtigung zulassen</string>
+    <string name="you_need_to_allow_the_storage_permission_n_to_save_statuses">Sie müssen die Speicherberechtigung \n erteilen, um Status zu speichern</string>
+    <string name="status_saver">Status-Sparer</string>
+    <string name="download_your_favorite_statuses">Laden Sie Ihre bevorzugten Status herunter</string>
+    <string name="loading">Laden...</string>
+    <string name="cancel">Stornieren</string>
+    <string name="got_it">Habe es</string>
+    <string name="grant_storage_permission">Speicherberechtigung erteilen</string>
+    <string name="allow_storage_permission_to_save_n_status_in_you_mobile">Erlauben Sie die Speicherberechtigung, um den Status auf Ihrem Mobilgerät zu speichern.</string>
+    <string name="new_update_is_available">Neues Update ist verfügbar</string>
+    <string name="the_latest_version_of_status_saver_is_available_n_with_new_and_improved_features">Die neueste Version von Status Saver ist verfügbar\n mit neuen und verbesserten Funktionen</string>
+    <string name="okay">Okay</string>
+    <string name="send_message">Nachricht senden</string>
+    <string name="share_link">Link teilen</string>
+    <string name="no_media_found">Keine Medien gefunden</string>
+    <string name="you_don_t_have_wa_business_n_please_install_it_first">Sie haben WA Business nicht\n Bitte installieren Sie es zuerst</string>
+    <string name="install_app">App installieren</string>
+    <string name="how_to_use">Wie benutzt man?</string>
+    <string name="you_need_to_allow_the_storage_permission_to_n_save_statuses_click_on_use_this_folder_n_button_in_setting_to_give_access">Sie müssen die Speicherberechtigung erteilen, um \n Status zu speichern. Klicken Sie in den Einstellungen auf die Schaltfläche (diesen Ordner verwenden) \n, um Zugriff zu gewähren</string>
+    <string name="repost">Erneut veröffentlichen</string>
+    <string name="share">Aktie</string>
+    <string name="download">Herunterladen</string>
+    <string name="delete">Löschen</string>
+    <string name="select_app_language">App-Sprache auswählen</string>
+
+    <string name="downloaded">Heruntergeladen</string>
+    <string name="directChat">Direktchat</string>
+    <string name="status">Status</string>
+</resources>

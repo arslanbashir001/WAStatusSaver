@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FFFFFF</color>
+    <color name="green_light">#00181C</color>
+    <color name="white">#374D51</color>
+    <color name="splash_description_text_color">#FFFF</color>
+    <color name="background_color">#00181C</color>
+    <color name="dark_blackish_green">#FFFFFF</color>
+    <color name="bottom_sheet_background_color">#374D51</color>
+    <color name="green_primary">#01F675</color>
+    <color name="splash_progress_background_color">#DCF8C6</color>
+    <color name="gray">#8891A1</color>
+    <color name="red">#FFA3A4</color>
+    <color name="preview_activity_background_color">#00181C</color>
+    <color name="preview_activity_icons_and_text_color">#FFFFFF</color>
+    <color name="no_image_video_media_vectors_color">#374D51</color>
+    <color name="language_selection_item_background_color">#374D51</color>
+
+    <color name="radio_selected_color">#00181C</color>
+    <color name="radio_unselected_color">#FFFF</color>
+
+</resources>
