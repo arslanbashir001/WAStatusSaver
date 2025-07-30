@@ -57,4 +57,9 @@
    git clone https://github.com/arslanbashir001/WAStatusSaver.git
    cd WAStatusSaver
 
+## 📄 License
+This project is licensed under the MIT License.
+
+
+
 
