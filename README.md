@@ -44,12 +44,10 @@
 - **Architecture**: MVVM (Model–View–ViewModel)  
 - **State Management**: Jetpack ViewModel + LiveData  
 - **Image Loading**: Glide  
-- **Media Playback**: ExoPlayer (Media3)  
+- **Media Playback**: ExoPlayer 
 - **Storage**: Internal Media Storage (Scoped Storage)  
-- **Networking / Parsing**: Firebase Realtime Database, Gson  
 - **Crash & Analytics**: Firebase Crashlytics, Firebase Analytics  
 - **UI Enhancements**: Zoomage (image zoom), FastScroll (scrollbar)  
-- **Testing**: JUnit, Espresso  
 - **Tools Used**: Android Studio, Gradle (with Version Catalogs)  
 - **Supported Apps**: WhatsApp & WhatsApp Business  
 - **Minimum SDK**: API 24 (Android 7.0 Nougat)
